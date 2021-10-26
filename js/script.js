@@ -4,7 +4,7 @@
 
 const rubrica = ['davide470@tiscali.it','elena@gmail.com','nicola@live.com','francesco78@tiscali.it','cartadavi@gmail.com','vale98@gmail.com','eleonorabianchi@tiscali.it' ];
 
-const emailCercata = prompt('eleonorabianchi@tiscali.it');
+const emailCercata = prompt('digita mail');
 let emailCorrispondente = 0;
 
 for (let i=0; i<7; i++){
@@ -17,7 +17,9 @@ if (emailCorrispondente){
   permesso= 'puo accedere';
 }
 
-console.log(permesso);
+const soluzioni = document.querySelector('h1');
+soluzioni.innerHTML = permesso;
+
 
 
 // Gioco dei dadi
@@ -25,7 +27,7 @@ console.log(permesso);
 // Stabilire il vincitore, in base a chi fa il punteggio più alto.
 let numbers =[0,0];
 for(let i=0; i<2; i++){
-  let random = Math.floor(Math.random()*5)+1;
+  let random = Math.floor(Math.random()*6)+1;
   numbers[i] = random;
 }
 const numMine = numbers[0];
@@ -40,3 +42,6 @@ if (numMine===numPc){
   vincita= 'non ha vinto nessuno';
 }
 console.log(vincita);
+
+const soluzioni = document.querySelector('h1');
+soluzioni.innerHTML = vincita;
