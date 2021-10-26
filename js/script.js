@@ -25,10 +25,10 @@ soluzioni.innerHTML = permesso;
 // Gioco dei dadi
 // Generare un numero random da 1 a 6, sia per il giocatore sia per il computer.
 // Stabilire il vincitore, in base a chi fa il punteggio più alto.
-let numbers =[0,0];
+let numbers =[];
 for(let i=0; i<2; i++){
   let random = Math.floor(Math.random()*6)+1;
-  numbers[i] = random;
+  numbers.push(random);
 }
 const numMine = numbers[0];
 const numPc = numbers[1];
